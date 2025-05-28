@@ -10,6 +10,7 @@
     <input type="checkbox" id="loginToggle" hidden />
     <input type="checkbox" id="profileToggle" hidden />
     <input type="checkbox" id="balanceToggle" hidden />
+    <input type="checkbox" id="popupToggle" hidden />
 
 <!-- صفحه ورود -->
   <div class="login-box-container">
@@ -51,6 +52,7 @@
     <ul>
       <li><label for="profileToggle" class="sidebar-btn">👨🏻‍🎓 پروفایل</label></li>
       <li><label for="balanceToggle" class="sidebar-btn">💸 موجودی حساب</label></li>
+      <li><label for="popupToggle" class="sidebar-btn">🍽️ رزرو غذا</label></li>
     </ul>
   </div>
 </div>
@@ -94,7 +96,7 @@
         </div>
         <div class="mb-2">
           <label class="form-label">شماره کارت / تاریخ انقضا</label>
-          <input type="text" class="form-control" placeholder="شماره پویا" />
+          <input type="text" class="form-control" placeholder="شماره کارت / تاریخ انقضا" />
         </div>        
         <button class="btn btn-balance mt-2">دریافت رمز پویا</button>
         <div class="mb-2">
@@ -107,6 +109,78 @@
         </div>
         <button type="submit" class="btn btn-balance mt-2">شارژ حساب</button>
       </form>
+    </div>
+  </div>
+
+<!-- جدول رزرو غذا -->
+    <label for="popupToggle" class="overlay"></label>
+    <div class="popup">
+      <h4 class="mb-3">🧾 جدول انتخاب وعده‌های غذایی</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>روز</th>
+              <th>🥐 صبحانه</th>
+              <th>🍛 ناهار</th>
+              <th>🥘 شام</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <!-- شنبه -->
+            <tr>
+              <td>شنبه</td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="sat1" class="food-radio"><span>پنیر و گردو</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="sat2" class="food-radio"><span>قرمه‌سبزی</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="sat3" class="food-radio"><span>سوپ جو</span></div></td>
+            </tr>
+            <!-- یکشنبه -->
+            <tr>
+              <td>یکشنبه</td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="sun1" class="food-radio"><span>نیمرو</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="sun2" class="food-radio"><span>جوجه‌کباب</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="sun3" class="food-radio"><span>سالاد الویه</span></div></td>
+            </tr>
+            <!-- دوشنبه -->
+            <tr>
+              <td>دوشنبه</td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="mon1" class="food-radio"><span>کره و مربا</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="mon2" class="food-radio"><span>قیمه</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="mon3" class="food-radio"><span>فلافل</span></div></td>
+            </tr>
+            <!-- سه‌شنبه -->
+            <tr>
+              <td>سه‌شنبه</td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="tue1" class="food-radio"><span>فرنی</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="tue2" class="food-radio"><span>کوبیده</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="tue3" class="food-radio"><span>خوراک لوبیا</span></div></td>
+            </tr>
+            <!-- چهارشنبه -->
+            <tr>
+              <td>چهارشنبه</td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="wed1" class="food-radio"><span>عدسی</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="wed2" class="food-radio"><span>مرغ ترش</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="wed3" class="food-radio"><span>آش ماست</span></div></td>
+            </tr>
+            <!-- پنج‌شنبه -->
+            <tr>
+              <td>پنج‌شنبه</td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="thu1" class="food-radio"><span>املت</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="thu2" class="food-radio"><span>ماکارانی</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="thu3" class="food-radio"><span>میرزاقاسمی</span></div></td>
+            </tr>
+            <!-- جمعه -->
+            <tr>
+              <td>جمعه</td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="fri1" class="food-radio"><span>خامه و عسل</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="fri2" class="food-radio"><span>کباب تابه‌ای</span></div></td>
+              <td><div class="d-flex flex-column align-items-center"><input type="radio" name="fri3" class="food-radio"><span>ماهی پلو</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <label for="popupToggle" class="btn btn-success mt-3">ذخیره وعده‌های غذایی ✅</label>
     </div>
   </div>
 

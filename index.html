@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سامانه رزرو غذا | دانشگاه صنعتی بیرجند</title>
+</head>
+<body>
+
+    <input type="checkbox" id="loginToggle" hidden />
+
+<!-- صفحه ورود -->
+  <div class="login-box-container">
+    <div class="login-box">
+      <h2>🔐 ورود به سامانه</h2>
+      <form onsubmit="return false">
+        <div class="mb-3">
+          <label class="form-label">شماره دانشجویی</label>
+          <input type="text" class="form-control" placeholder="شماره دانشجویی" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">رمز عبور</label>
+          <input type="password" class="form-control" placeholder="رمز عبور" />
+        </div>
+        <label for="loginToggle" class="btn btn-custom mt-3">ورود ➡️</label>
+      </form>
+    </div>
+  </div>
+
+<!-- داشبورد -->
+<div class="dashboard">
+  <div class="main-content">
+    <div class="topbar">
+      <img src="./resources/images/آرم دانشگاه صنعتی بیرجند.png">
+      سامانه رزرو غذای دانشگاه صنعتی بیرجند
+</div>
+    <div class="content">
+      <p>به سامانه خوش آمدید!</p>
+      <img src="./resources/images/5877490937750473337.jpg">
+    </div>
+  </div>
+
+  <!-- 
+  سایدبار اصلی داشبورد که شامل دکمه‌های ناوبری برای دسترسی سریع به بخش‌های مختلف پنل است.
+  هر گزینه به‌صورت یک label طراحی شده که با inputهای hidden در جای دیگر صفحه مرتبط است.
+  آیکون‌ها در کنار متن برای افزایش تجربه کاربری (UX) استفاده شده‌اند.
+-->
+  <div class="sidebar">
+    <ul>
+      <li><label for="profileToggle" class="sidebar-btn">👨🏻‍🎓 پروفایل</label></li>
+    </ul>
+  </div>
+</div>
+
+<!-- کارت پروفایل -->
+  <div class="profile-card">
+    <div class="profile-content">
+      <h4>پروفایل دانشجو</h4>
+      <img src="./resources/images/photo18907716961.jpg">
+      <p><strong>نام:</strong>ارسلان</p>
+      <p><strong>نام خانوادگی:</strong> فلزی</p>
+      <p><strong>شماره دانشجویی:</strong> 4001811128</p>
+      <form>
+        <div class="mb-2">
+          <h4>تغییر رمز عبور:</h4>
+          <label class="form-label">رمز عبور جدید</label>
+          <input type="password" class="form-control" placeholder="رمز جدید" />
+        </div>
+        <div class="mb-2">
+          <label class="form-label">تکرار رمز عبور</label>
+          <input type="password" class="form-control" placeholder="تکرار رمز" />
+        </div>
+        <button type="submit" class="btn btn-profile mt-2">ذخیره تغییرات</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

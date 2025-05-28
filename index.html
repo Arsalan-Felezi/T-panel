@@ -11,6 +11,8 @@
     <input type="checkbox" id="profileToggle" hidden />
     <input type="checkbox" id="balanceToggle" hidden />
     <input type="checkbox" id="popupToggle" hidden />
+    <input type="checkbox" id="surveyToggle" hidden />
+    <input type="checkbox" id="feedbackToggle" hidden />
 
 <!-- صفحه ورود -->
   <div class="login-box-container">
@@ -53,6 +55,8 @@
       <li><label for="profileToggle" class="sidebar-btn">👨🏻‍🎓 پروفایل</label></li>
       <li><label for="balanceToggle" class="sidebar-btn">💸 موجودی حساب</label></li>
       <li><label for="popupToggle" class="sidebar-btn">🍽️ رزرو غذا</label></li>
+      <li><label for="surveyToggle" class="sidebar-btn">📝 نظرسنجی</label></li>
+      <li><label for="feedbackToggle" class="sidebar-btn">✍🏻 ثبت نظرات کاربران</label></li>
     </ul>
   </div>
 </div>
@@ -183,6 +187,46 @@
       <label for="popupToggle" class="btn btn-success mt-3">ذخیره وعده‌های غذایی ✅</label>
     </div>
   </div>
+
+<!-- نظرسنجی -->
+  <div class="survey-box">
+  <h3>از غذای امروز چقدر رضایت داشتید؟</h3>
+  <div class="emoji-options">
+    <label><input type="radio" name="satisfaction"><span>عالی</span> <span>😋</span></label>
+    <hr>
+    <label><input type="radio" name="satisfaction"><span>خوب</span> <span>🙂</span></label>
+    <hr>
+    <label><input type="radio" name="satisfaction"><span>معمولی</span> <span>😐</span></label>
+    <hr>
+    <label><input type="radio" name="satisfaction"><span>بد</span> <span>😕</span></label>
+    <hr>
+    <label><input type="radio" name="satisfaction"><span>خیلی بد</span> <span>😖</span></label> 
+    <hr> 
+  </div>
+  <label for="surveyToggle" class="btn btn-success mt-3">ثبت نظرسنجی ✅</label>
+  </div>
+
+<!-- ثبت نظر کاربران -->
+<div class="feedback-popup">
+  <h4 class="mb-3">ثبت نظر</h4>
+  <textarea class="custom-textarea mb-3" rows="3" placeholder="نظر خود را بنویسید..."></textarea>
+  <button class="btn-custom2 mb-4" id="submitFeedback">ارسال نظر</button>
+
+  <hr style="border-color: #ffd70044;">
+  <h5 class="mb-2" style="color: #ffd700;">نظرات قبلی:</h5>
+  <div class="comment-box">
+    <p><strong>مریم:</strong> غذای امروز عالی بود!</p>
+    <p><strong>علی:</strong> ای کاش غذاها متنوع‌تر بشه.</p>
+    <p><strong>سارا:</strong> کیفیت غذا نسبت به هفته پیش بهتر شده.</p>
+  </div>
+</div>
+
+<!-- 😬این یک تیکه رو به استادی خودتون ببخشید دیگه -->
+<script>
+  document.getElementById("submitFeedback").addEventListener("click", function () {
+    document.getElementById("feedbackToggle").checked = false;
+  });
+</script>
 
 </body>
 </html>

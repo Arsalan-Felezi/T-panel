@@ -8,6 +8,8 @@
 <body>
 
     <input type="checkbox" id="loginToggle" hidden />
+    <input type="checkbox" id="profileToggle" hidden />
+    <input type="checkbox" id="balanceToggle" hidden />
 
 <!-- صفحه ورود -->
   <div class="login-box-container">
@@ -48,6 +50,7 @@
   <div class="sidebar">
     <ul>
       <li><label for="profileToggle" class="sidebar-btn">👨🏻‍🎓 پروفایل</label></li>
+      <li><label for="balanceToggle" class="sidebar-btn">💸 موجودی حساب</label></li>
     </ul>
   </div>
 </div>
@@ -71,6 +74,38 @@
           <input type="password" class="form-control" placeholder="تکرار رمز" />
         </div>
         <button type="submit" class="btn btn-profile mt-2">ذخیره تغییرات</button>
+      </form>
+    </div>
+  </div>
+
+<!-- کارت موجودی حساب -->
+  <div class="balance-card">
+    <div class="balance-content">
+      <h4>موجودی حساب</h4>
+      <p><strong>موجودی فعلی:</strong> 150,000 تومان</p>
+      <form>
+        <div class="mb-2">
+          <label class="form-label">شماره کارت</label>
+          <input type="text" class="form-control" placeholder="شماره کارت 16 رقمی" />
+        </div>
+        <div class="mb-2">
+          <label class="form-label">cvv2</label>
+          <input type="text" class="form-control" placeholder="cvv2" />
+        </div>
+        <div class="mb-2">
+          <label class="form-label">شماره کارت / تاریخ انقضا</label>
+          <input type="text" class="form-control" placeholder="شماره پویا" />
+        </div>        
+        <button class="btn btn-balance mt-2">دریافت رمز پویا</button>
+        <div class="mb-2">
+          <label class="form-label">شماره پویا</label>
+          <input type="text" class="form-control" placeholder="شماره پویا" />
+        </div>        
+        <div class="mb-2">
+          <label class="form-label">مبلغ شارژ (تومان)</label>
+          <input type="number" class="form-control" placeholder="مثلاً 50000" />
+        </div>
+        <button type="submit" class="btn btn-balance mt-2">شارژ حساب</button>
       </form>
     </div>
   </div>

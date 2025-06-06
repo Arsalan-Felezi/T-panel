@@ -17,6 +17,7 @@
     <input type="checkbox" id="popupToggle" hidden />
     <input type="checkbox" id="surveyToggle" hidden />
     <input type="checkbox" id="feedbackToggle" hidden />
+    <input type="checkbox" id="settingsToggle" hidden />
 
 <!-- صفحه ورود -->
   <div class="login-box-container">
@@ -232,21 +233,21 @@
   });
 </script>
 
-<!-- نوبار افقی -->
 <!-- 😁🤷🏻‍♂️برای داخل اینا چیزی نذاشتم چون ایده ای نداشتم در نتیجه دکوریه -->
-<nav class="sidebar-bottom-right">
-  <ul>
-    <li><a href="index.html" title="خانه" class="nav-link">
-      <span>🏠</span> خانه
-    </a></li>
-    <li><a href="#" title="تنظیمات" class="nav-link">
-      <span>⚙️</span> تنظیمات
-    </a></li>
-    <li><a href="login.html" title="خروج" class="nav-link logout">
-      <span>🚪</span> خروج
-    </a></li>
-  </ul>
-</nav>
+<!-- نوار پایین -->
+  <nav class="sidebar-bottom-right">
+    <ul>
+      <li><a href="#" title="خانه" class="nav-link" onclick="alert('در حال توسعه 🚧'); return false;">
+        <span>🏠</span> خانه
+      </a></li>
+      <li><label for="settingsToggle" title="تنظیمات" class="nav-link" style="cursor: pointer;">
+        <span>⚙️</span> تنظیمات
+      </label></li>
+      <li><a href="#" title="خروج" class="nav-link logout" onclick="logout();">
+        <span>🚪</span> خروج
+      </a></li>
+    </ul>
+  </nav>
 
 <footer class="footer">
   <p>در صورت بروز هرگونه مشکل در سامانه، لطفاً با پشتیبانی تماس بگیرید: </p>
